@@ -10,37 +10,12 @@
 * server        服务端文件
 * web           网站文件  
 
-# 更新说明：
 
-* 20190129, 降低CPU占用            
-* 20181221, 增加实时到三网的延迟, 鼠标移到丢包率列,tips显示        
-* 20181126, add tupd(tcp, udp, process ,thread) count for view ddcc attack    
-* 20180829, 网络情况：主机到三网(CU,CT,CM)每小时丢包率的检测
-* 20180726, 一切皆容器额,查看自动部署或autodeploy/readme
-* 20180314, 调整前端，置默认密码为，设置ip和user即可上线　　　　　　
-* 20180312, 加入失联(被照顾)检测【正常：MH361, 屏蔽：MH370】，校准虚拟化(container)流量统计异常　　　　　　
-* 20170807, 更新平均1，5，15负载, 去掉无用的IPV6信息，增加服务器总流量监控                           
 
-# 自动部署：
 
-【服务端】：
-```bash
-wget https://raw.githubusercontent.com/cppla/ServerStatus/master/autodeploy/config.json
-docker run -d --restart=always --name=serverstatus -v {$path}/config.json:/ServerStatus/server/config.json -p {$port}:80 -p {$port}:35601 cppla/serverstatus
 
-eg:
-docker run -d --restart=always --name=serverstatus -v ~/config.json:/ServerStatus/server/config.json -p 80:80 -p 35601:35601 cppla/serverstatus
-```
 
-【客户端】：
-```bash
-wget --no-check-certificate -qO client-linux.py 'https://raw.githubusercontent.com/cppla/ServerStatus/master/clients/client-linux.py' && nohup python client-linux.py SERVER={$SERVER} USER={$USER} PASSWORD={$PASSWORD} >/dev/null 2>&1 &
-
-eg:
-wget --no-check-certificate -qO client-linux.py 'https://raw.githubusercontent.com/cppla/ServerStatus/master/clients/client-linux.py' && nohup python client-linux.py SERVER=45.79.67.132 USER=s04  >/dev/null 2>&1 &
-```
-
-# 手动安装教程：     
+安装教程：     
    
 【克隆代码】:
 ```
@@ -118,12 +93,7 @@ pip install psutil
 
 打开云探针页面，就可以正常的监控。接下来把服务器和客户端脚本自行加入开机启动，或者进程守护，或以后台方式运行即可！例如： nohup python client-linux.py &      
 
-# 为什么会有ServerStatus中文版：
 
-* 有些功能确实没用
-* 原版本部署，英文说明复杂
-* 不符合中文版的习惯
-* 没有一次又一次的轮子，哪来如此优秀的云探针
 
 # 相关开源项目，感谢： 
 
