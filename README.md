@@ -1,26 +1,3 @@
-# ServerStatus中文版：   
-
-* ServerStatus中文版是一个酷炫高逼格的云探针、云监控、服务器云监控、多服务器探针~。
-* 在线演示：https://tz.cloudcpp.com    
-
-# 目录介绍：
-
-* autodeploy    自动部署.
-* clients       客户端文件
-* server        服务端文件
-* web           网站文件  
-
-
-
-
-
-
-安装教程：     
-   
-【克隆代码】:
-```
-git clone https://github.com/cppla/ServerStatus.git
-```
 
 【服务端配置】（服务端程序在ServerStatus/web下）:  
           
