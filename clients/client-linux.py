@@ -14,8 +14,8 @@ PORT = 35601
 PASSWORD = "USER_DEFAULT_PASSWORD"
 INTERVAL = 1
 PORBEPORT = 80
-CU = "www.chinatelecom.com.cn"
-CT = "60.217.44.4"
+CU = "ct.tz.cloudcpp.com"
+CT = "cu.tz.cloudcpp.com"
 CM = "cm.tz.cloudcpp.com"
 
 import socket
